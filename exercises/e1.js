@@ -9,7 +9,6 @@ export function getPlanetNames(data) {
   const planets = data.planets;
   const planetNames = planets.map((planet) => planet.name);
 
-  console.log(planetNames);
   return planetNames;
 }
 
