@@ -9,18 +9,17 @@ export function getPlanetsWithMassValue(data, number) {
   const planets = data.planets;
   const planetsMassVal = planets
     .map((planet) => {
-      let result;
+      let resultName;
       let planetMass = planet.mass;
       let planetName = planet.name;
       if (planetMass.massValue >= number) {
-        result = planetName;
-        return result;
+        resultName = planetName;
+        return resultName;
       }
     })
-    .filter((name) => {
-      if (name) {
-        console.log(name);
-        return name;
+    .filter((filteredName) => {
+      if (filteredName) {
+        return filteredName;
       }
     });
   return planetsMassVal;
