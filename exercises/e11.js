@@ -7,21 +7,9 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
-  const planets = data.planets;
-  const planetsLessThanTenMoons = planets
-    .filter((planet) => {
-      if (!planet.moons || planet.moons.length < 10) {
-        return planet.name;
-      }
-    })
-    .map((planet) => {
-      if (planet) {
-        return planet.name;
-      }
-      return "Double check your code";
-    });
-
-  return planetsLessThanTenMoons;
+  return data.planets
+    .filter((planet) => !planet.moons || planet.moons.length < 10)
+    .map((planet) => planet.name);
 }
 
 // === TEST YOURSELF ===
